@@ -1,98 +1,98 @@
+# 🚨 **CyberFlux: Raspberry Pi Network Intrusion Detection System (NIDS)**
 
-# **Raspberry Pi Network Intrusion Detection System (NIDS)**
+CyberFlux is a Python-based Network Intrusion Detection System (NIDS) designed for real-time traffic analysis and threat detection on Raspberry Pi. Lightweight yet powerful, it monitors live network packets over TCP/IP, detects anomalies including brute-force attacks and port scans, and blocks malicious IPs automatically. Tailored for Unix/Linux environments, it's an ideal solution for securing IoT and distributed systems.
 
-A Python-based Network Intrusion Detection System (NIDS) designed to detect and block malicious activities on a Raspberry Pi. This lightweight and efficient tool monitors live network traffic, detects malicious activity, and logs incidents for analysis.
+### 🖼️ Sample Execution Screenshot
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1a827374-d89f-4b3d-8f6a-2034264f732e" width="500">
-</p>
-
+<img src="assets/image.png" width="700">
 
 
-## **Collaborators**
-1. Ameen Siddiqui
-2. [Mohammed Idris](https://github.com/mczdj) 
+---
 
-## **Features**
-- **Brute Force Attack Detection**: Monitors SSH traffic for repeated failed login attempts and blocks offending IPs.
-- **Live Traffic Monitoring**: Displays live network traffic with timestamps and identifies attack types.
-- **Automatic IP Blocking**: Automatically blocks IPs that exceed a predefined failed login threshold.
-- **Manual Block/Unblock**: Allows users to manually block or unblock IPs through a user-friendly menu.
-- **Logs Management**: Logs all detected attacks with timestamps for future reference.
-- **Menu-Driven Interface**: Simple and interactive CLI for ease of use.
-- **Nmap Scan Detection**: Detects SYN, Null, and XMAS scans performed using tools like Nmap and logs them.
-- **ARP Poisoning Detection**: Identifies ARP spoofing attempts to alert and log malicious behavior.
+## 👨‍💻 **Collaborators**
+- **Sumit Chauhan**
 
-## **Installation**
+---
 
-### **Prerequisites**
-- Raspberry Pi running a Linux-based OS.
-- Python 3.x installed.
-- Required Python modules: `scapy`.
+## ✨ **Key Features**
 
-### **Setup Instructions**
-1. Clone this repository:
-   ```
-   git clone https://github.com/AmeenMS03/IoT_IDS.git
-   cd IoT_IDS
-   ```
-2. Install the required Python library:
-   ```
-   sudo apt-get update
-   sudo apt-get install python3-pip
-   pip3 install scapy
-   ```
-3. Install `iptables` for IP blocking:
-   ```
-   sudo apt-get install iptables
-   ```
+- 🔐 **Brute Force SSH Detection**  
+  Detects repeated failed SSH login attempts and blocks the offending IP.
 
-## **Usage**
+- 📶 **Real-Time Packet Sniffing**  
+  Monitors live network traffic using `scapy` and displays connection attempts with timestamps and attack details.
 
-1. Run the program:
-   ```
-   sudo python3 code.py
-   ```
-2. Select an option from the menu:
-   - **Start Packet Sniffing**: Monitors live traffic for potential brute force attacks, Nmap scans, and ARP poisoning attempts.
-   - **Block an IP Manually**: Add an IP to the blocklist.
-   - **Remove IP from Blocklist**: Unblock a previously blocked IP.
-   - **Show Blocked IPs**: Display all currently blocked IPs.
-   - **View Logs**: View recorded logs of detected attacks.
-   - **Exit**: Quit the program.
+- 🚫 **Automatic & Manual IP Blocking**  
+  Offending IPs are auto-blocked using `iptables`; manual block/unblock options are also available via CLI.
 
-## **Configuration**
+- 🧠 **Nmap Scan Detection**  
+  Identifies SYN, NULL, and XMAS scans commonly used by attackers to fingerprint networks.
 
-- **Failed Login Threshold**:
-  - Set the number of failed SSH login attempts before an IP is blocked.
+- ⚠️ **ARP Spoofing Detection**  
+  Alerts on ARP poisoning attempts to ensure network integrity.
 
-- **Log File**:
-  - All logs are saved in `logs.txt` in the same directory as the script.
+- 📁 **Attack Logging**  
+  All detections are logged with detailed timestamps for post-incident analysis.
 
-## **Example Output**
+- 🧭 **Menu-Driven Interface**  
+  Intuitive command-line interface designed for ease of use on headless Linux setups.
 
-### **Live Traffic**
-```
-[2024-11-15 12:00:00] 192.168.1.101 -> 192.168.1.24, Port: 22 | Attack Type: No
-[2024-11-15 12:00:05] 192.168.1.101 -> 192.168.1.24, Port: 22 | Attack Type: Brute Force - SSH - 22
-[2024-11-15 12:01:00] SYN scan detected from 192.168.1.102 to port 22 | Attack Type: Nmap SYN Scan
-[2024-11-15 12:02:00] ARP Poisoning detected: 192.168.1.103 is claiming to be MAC 00:11:22:33:44:55
-```
+---
 
-### **Blocked IPs**
-```
-Blocked IPs:
+## 🧰 **Installation**
+
+### 🔧 **Prerequisites**
+- Raspberry Pi running a Linux-based OS (e.g., Raspbian)
+- Python 3.x
+- Required module: `scapy`
+
+### ⚙️ **Setup Instructions**
+
+# Step 1: Clone the Repository
+git clone https://github.com/Gosling-dude/yberFlux-Advanced-Network-Intrusion-Detection-System-NIDS-.git  
+cd yberFlux-Advanced-Network-Intrusion-Detection-System-NIDS-
+# Step 2: Install Python dependencies
+sudo apt-get update
+sudo apt-get install python3-pip
+pip3 install scapy
+
+# Step 3: Install iptables for IP blocking
+sudo apt-get install iptables
+
+## 🚀 **Usage**
+sudo python3 code.py
+## 📋 **Menu Options**
+Start Packet Sniffing – Begins monitoring for brute force, scans, and ARP spoofing.
+
+Block an IP Manually – Manually add IPs to the blocklist.
+
+Remove IP from Blocklist – Unblock IPs with a single command.
+
+Show Blocked IPs – View all currently blocked IP addresses.
+
+View Logs – See historical attack records.
+
+Exit – Terminate the tool.
+
+## ⚙️ **Configuration**
+🔁 **Failed Login Threshold**
+Configure the max failed SSH attempts before triggering an auto-block.
+
+📝 **Logging Path**
+Logs are stored in logs.txt in the project root directory.
+
+🧪 **Sample Output**
+🔍 Live Traffic Example
+[12:00:00] 192.168.1.101 → 192.168.1.24 | Port: 22 | Attack Type: No
+[12:00:05] 192.168.1.101 → 192.168.1.24 | Attack: Brute Force - SSH
+[12:01:00] Nmap SYN Scan from 192.168.1.102
+[12:02:00] ARP Poisoning Attempt by 192.168.1.103 claiming MAC 00:11:22:33:44:55
+## 🛑 **Blocked IPs**
 192.168.1.101
 192.168.1.102
-```
-
-### **Logs**
-```
-[2024-11-15 12:00:05] 192.168.1.101 -> 192.168.1.24, Port: 22 | Attack Type: Brute Force - SSH - 22
-[2024-11-15 12:01:00] SYN scan detected from 192.168.1.102 to port 22 | Attack Type: Nmap SYN Scan
-[2024-11-15 12:02:00] ARP Poisoning detected: 192.168.1.103 is claiming to be MAC 00:11:22:33:44:55
-```
-
-## **License**
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+## 📚 **Log Snippets**
+[12:00:05] SSH Brute Force - IP: 192.168.1.101
+[12:01:00] Nmap SYN Scan Detected - IP: 192.168.1.102
+[12:02:00] ARP Poisoning Detected - IP: 192.168.1.103
+## 🪪 **License**
+This project is licensed under the MIT License. See the LICENSE file for more details.
