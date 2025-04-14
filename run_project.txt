@@ -1,0 +1,14 @@
+# 1. Navigate to your project directory
+cd "C:\Users\Sumit chauhan\CyberFlux -Advanced Network Intrusion Detection System (NIDS)"
+
+# 2. (Optional) Make sure Python 3.10 is installed and check the version
+py -3.10 --version
+
+# 3. Install required Python libraries
+py -3.10 -m pip install scapy
+
+# 4. (Optional) Install iptables for blocking functionality (if not already installed)
+# Note: This works only on Linux. On Windows, use firewall rules if needed.
+
+# 5. Run the script with admin privileges (use 'sudo' on Linux/macOS)
+py -3.10 code.py
