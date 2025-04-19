@@ -81,8 +81,8 @@ Configure the max failed SSH attempts before triggering an auto-block.
 📝 **Logging Path**
 Logs are stored in logs.txt in the project root directory.
 
-🧪 **Sample Output**
-🔍 Live Traffic Example
+## 🧪 **Sample Output**
+### 🔍 **Live Traffic Example**
 [12:00:00] 192.168.1.101 → 192.168.1.24 | Port: 22 | Attack Type: No
 [12:00:05] 192.168.1.101 → 192.168.1.24 | Attack: Brute Force - SSH
 [12:01:00] Nmap SYN Scan from 192.168.1.102
