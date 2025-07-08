@@ -102,3 +102,4 @@ Important Notes (Windows Users)
 - IP blocking is only simulated on Windows.
 - Always run PowerShell as Administrator for permission access.
 - Always enter the exact interface name shown in step 5.
+- windows only simulate it, actual blocking happen only on linux
