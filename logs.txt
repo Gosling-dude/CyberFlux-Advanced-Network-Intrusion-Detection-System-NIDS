@@ -1,0 +1,18 @@
+[2025-07-08 16:03:17] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:18] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:24] SYN scan detected from 10.10.208.92 to port 7680 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:27] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:41] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:45] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:48] ARP Poisoning detected: 0.0.0.0 is claiming to be 34:e6:ad:89:df:dc | Attack Type: ARP Poisoning
+[2025-07-08 16:03:50] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:50] ARP Poisoning detected: 0.0.0.0 is claiming to be 34:e6:ad:89:df:dc | Attack Type: ARP Poisoning
+[2025-07-08 16:03:50] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:51] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:51] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:52] SYN scan detected from 10.10.207.111 to port 443 | Attack Type: Nmap SYN Scan
+[2025-07-08 16:03:52] ARP Poisoning detected: 0.0.0.0 is claiming to be ac:16:2d:0f:e8:a2 | Attack Type: ARP Poisoning
+[2025-07-08 16:03:53] ARP Poisoning detected: 0.0.0.0 is claiming to be ac:16:2d:0f:e8:a2 | Attack Type: ARP Poisoning
+[2025-07-08 16:03:54] ARP Poisoning detected: 0.0.0.0 is claiming to be ac:16:2d:0f:e8:a2 | Attack Type: ARP Poisoning
+[2025-07-08 16:05:06] Blocked IP: 10.10.207.111 | Attack Type: IP Blocked
+[2025-07-08 16:06:08] Blocked IP: 10.10.207.111 | Attack Type: IP Blocked

@@ -1,14 +1,104 @@
-# 1. Navigate to your project directory
-cd "C:\Users\Sumit chauhan\CyberFlux -Advanced Network Intrusion Detection System (NIDS)"
+============================================================
+CyberFlux NIDS (by Sumit Chauhan) - Windows PowerShell Guide
+============================================================
 
-# 2. (Optional) Make sure Python 3.10 is installed and check the version
-py -3.10 --version
+✅ Follow these steps every time to run the project correctly.
 
-# 3. Install required Python libraries
+------------------------------------------------------------
+1. Open PowerShell as Administrator
+------------------------------------------------------------
+- Right-click on Start
+- Click “Windows PowerShell (Admin)”
+
+------------------------------------------------------------
+2. Navigate to the CyberFlux Project Directory
+------------------------------------------------------------
+Type the following (adjust drive/path if different):
+
+cd "D:\CyberFlux -Advanced Network Intrusion Detection System (NIDS)"
+
+------------------------------------------------------------
+3. (Only Once) Install Python Dependencies
+------------------------------------------------------------
+If you haven’t already installed scapy:
+
 py -3.10 -m pip install scapy
 
-# 4. (Optional) Install iptables for blocking functionality (if not already installed)
-# Note: This works only on Linux. On Windows, use firewall rules if needed.
+------------------------------------------------------------
+4. (Only Once) Install Npcap for Packet Sniffing
+------------------------------------------------------------
+- Download from: https://nmap.org/npcap/
+- During installation:
+    ✅ Check "WinPcap API-compatible Mode"
+    ✅ Check "Install Npcap in WinPcap mode"
+- Restart your PC if prompted
 
-# 5. Run the script with admin privileges (use 'sudo' on Linux/macOS)
-py -3.10 code.py
+------------------------------------------------------------
+5. Find Your Network Interface Name
+------------------------------------------------------------
+To list all available interfaces, run:
+
+py -3.10 -c "from scapy.all import show_interfaces; show_interfaces()"
+
+Sample Output:
+
+Source   Index  Name             MAC              IPv4             IPv6
+libpcap  1      Software Loopb_  00:00:00:00:00_  127.0.0.1        ::1
+libpcap  14     Intel(R) Ether_  ASUSTekCOMPU:6_  169.254.112.163  fe80::3129:45a6_
+libpcap  19     VirtualBox Hos_  0a:00:27:00:00_  192.168.56.1     fe80::9484:cc42_
+libpcap  22     Intel(R) Wi-Fi_  Intel:77:d7:9c   10.10.207.111    fe80::7e8e:873f_
+...
+
+✅ Choose the correct interface name (example: Intel(R) Wi-Fi_)
+
+------------------------------------------------------------
+6. Run the CyberFlux Program
+------------------------------------------------------------
+From the project directory, run:
+
+py -3.10 cyberflux.py
+
+------------------------------------------------------------
+7. Use the Menu
+------------------------------------------------------------
+
+Network Intrusion Detection System Menu:
+1. Start Packet Sniffing
+2. Block an IP Manually
+3. Remove IP from Blocklist
+4. Show Blocked IPs
+5. View Logs
+6. Exit
+
+>>> Option 1:
+    - Enter the correct interface name from step 5 (e.g., Intel(R) Wi-Fi_)
+    - It will start sniffing and detect attacks
+
+>>> Option 2:
+    - Type an IP to manually block (simulation)
+
+>>> Option 3:
+    - Unblock an IP that was blocked
+
+>>> Option 4:
+    - View all blocked IPs
+
+>>> Option 5:
+    - View attack logs (stored in logs.txt)
+
+>>> Option 6:
+    - Exit the program
+
+------------------------------------------------------------
+8. Logs
+------------------------------------------------------------
+All threats are stored in:
+logs.txt (in the project root folder)
+
+------------------------------------------------------------
+Important Notes (Windows Users)
+------------------------------------------------------------
+- "sudo iptables" commands will show "Command not found" — that's normal on Windows.
+- IP blocking is only simulated on Windows.
+- Always run PowerShell as Administrator for permission access.
+- Always enter the exact interface name shown in step 5.
